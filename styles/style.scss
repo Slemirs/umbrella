@@ -1,0 +1,110 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic);
+
+*{
+    box-sizing: border-box;
+}
+.container{
+    width: 940px;
+    margin: 0 auto;
+}
+.news{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    padding-bottom: 36px;
+    flex-wrap: wrap;
+}
+.news-card{
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    margin: 0 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 0px 0.00px rgba(1, 1, 1, 0.06);
+    flex-basis: calc((100% - 40px)/3);
+    overflow: hidden;
+    &:hover{
+        box-shadow: 2px 2px 2px 0.00px rgba(1, 1, 1, 0.06);
+        .news-card__title{
+            color: #ff6d55;
+        }
+        .news-card__timestamp{
+            color: #ff6d55;
+        }
+    }
+    &:first-child{
+        margin-left: 0;
+    }
+    &:last-child{
+        margin-right: 0;
+    }
+    &__thumbnail{
+        overflow: hidden;
+        height: 170px;
+        background: #aab2bd url('../img/placeholder-icon.png') no-repeat 50% 50%;
+    }
+    &__main-info{
+        padding: 40px 48px 24px 20px;
+    }
+    &__details{
+        margin-top: 21px;
+    }
+    &__title{
+        color: #434a54;
+        font: 400 18px Arial;
+        margin-bottom: 11px;
+    }
+    &__desc{
+        color: #aab2bd;
+        font: 400 13px / 20px Open Sans;
+    }
+    &__timestamp{
+        display: inline-block;
+        color: rgba(170, 178, 189, 0.6);
+        font: 400 11px Arial;
+        margin-right: 16px;
+        &:before{
+            content: '';
+            display: inline-block;
+            background: url('../img/clock-icon.png') no-repeat;
+            width: 16px;
+            height: 16px;
+            margin-right: 4px;
+            vertical-align: middle;
+        }
+    }
+    &__comments{
+        display: inline-block;
+        color: rgba(170, 178, 189, 0.6);
+        font: 400 11px Arial;
+        text-decoration: none;
+        &:hover{
+            color: rgba(170, 178, 189, 1);
+        }
+        &:before{
+            content: '';
+            display: inline-block;
+            background: url('../img/comments-icon.png') no-repeat;
+            width: 16px;
+            height: 14px;
+            margin-right: 4px;
+            vertical-align: middle;
+        }
+    }
+}
+
+.footer{
+    background-color: #e6e9ed;
+    &__terms{
+        color: #aab2bd;
+        font: 400 13px Arial;
+        text-align: right;
+        color: #aab2bd;
+        padding: 30px 0 27px 0;
+    }
+}
